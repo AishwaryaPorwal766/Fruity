@@ -1,0 +1,750 @@
+:root 
+{
+	--white : #fff;
+	--primaryColor: #f1f1f1;
+	--default: #4a1667;
+	--dark-color:#222;
+	--black:#000;
+}
+
+*,*::after,*::before
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+}
+html
+{
+	scroll-behavior: smooth;
+	box-sizing: border-box;
+	font-size: 62.5%;
+
+}
+body,input
+{
+	position: relative;
+	font-size: 1.6rem;
+	font-weight: 400;
+
+}
+img
+{
+	max-width: 100%;
+	max-height: 100%;
+}
+a
+{
+	text-decoration: none;
+}
+section
+{
+	width: 100%;
+	height: 100vh;
+
+}
+.fill
+{
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+/**********************Header*******************/
+.header
+{
+ background-color: var(--primaryColor);
+}
+.header nav
+{
+ background-color: transparent !important;
+  
+  padding-top: 2rem;
+}
+nav .navbar-brand
+{
+	color: var(--black)!important;
+	font-size: 3.8rem;
+	font-weight: 600;
+	transition: all .5s;
+}
+
+nav .navbar-brand:hover
+{
+	color: var(--default)!important;
+}
+
+.navbar-nav .nav-item .nav-link
+{
+	color:var(--black);
+	margin-right: 2.5rem;
+	font-size: 2rem;
+	font-weight: bolder;
+	font-family: 'Alegreya SC';
+	transition: all .3s ease-in-out;
+}
+.navbar-nav .nav-item .nav-link:hover
+{
+	color: var(--default);
+	 text-shadow: 0 0 3px #4a1667;
+}
+
+.banner .main .title 
+{
+  margin-top: 20rem;
+}
+.banner .main .title  h1
+{
+	color: var(--default);
+	font-size: 4rem;
+	letter-spacing: .1rem;
+	padding-bottom: 2rem;
+	line-height: 4.8rem;
+
+	font-weight: bolder;
+}
+.banner .main .title p
+{
+	color: var(--dark-color);
+	font-size: 2.5rem;
+	font-weight: bolder;
+	padding-bottom: 4rem;
+	text-transform: capitalize;
+	font-family: 'Voltaire';
+	letter-spacing: .1rem;
+}
+.banner .main .title .btn, .products .content .items .card .desc .btn
+{
+	padding: 1rem 3rem;
+	font-size: 2rem;
+	border: .2rem solid #4a1667;
+	outline: none;
+	text-align: center;
+	background-color: #4a1667;
+	color: #fff;
+	font-weight: 600;
+	letter-spacing: .2rem;
+	transition: all .3s ease-in-out;
+		font-family: 'Voltaire';
+
+}
+.banner .main .title .btn:hover, .products .content .items .card .desc .btn:hover
+{
+	background-color: #fff;
+	color: var(--dark-color);
+	
+	border-radius: 1rem 2.5rem;
+}
+.banner .fill
+{
+	margin-top: 6rem;
+
+}
+.banner .fill img
+{
+	object-fit: cover;
+	height: 80%;
+	width: 85%;
+
+}
+
+
+
+
+
+
+
+/**********************NEW-products*******************/
+
+
+
+
+
+
+
+
+.products
+{
+	padding-top:  4rem ;
+	padding-bottom: 2rem;
+	text-align: center;
+	height: 80vh;
+
+}
+.products .title 
+{
+	text-align: center;
+	padding-bottom: 2rem;
+	font-weight: bolder;
+	font-size: 3.8rem;
+	letter-spacing: .1rem;
+	position: relative;
+	display: inline-block;
+	font-family: 'Alegreya SC';
+
+
+	
+}
+.products .title::after
+{
+	content: " ";
+	clear: both;
+	position: absolute;
+	display: inline-block;
+	bottom: 0;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	height: .5rem;
+	width: 40%;
+	background-color: var(--default);
+
+
+}
+
+.products .content
+{   
+	
+ 	display: grid;
+	grid-template-columns: repeat(4,23.5%);
+	grid-template-rows: 20rem;
+
+	grid-column-gap: 3rem;
+
+	padding-top: 3rem;
+
+}
+.products .content .items .card-body
+{
+  background-color: #eee;
+  height: 25rem;
+
+}
+.products .content .items .card 
+{
+	position: relative;
+	transition: all .5s ease-in-out;
+}
+.products .content .items .card-body 
+{
+   height: 22rem;	
+ 
+}
+.products .content .items .card-body .fill img
+{
+	display: block;
+	object-fit: contain;
+	width: 19rem;
+	height: 20rem;
+}
+
+.products .content .items .card .card-footer
+{
+	background-color: #eee;
+	text-align: center;
+}
+
+.products .content .items .card .card-footer .head
+{
+  font-weight: bolder;
+  font-size: 2rem;
+  padding-bottom: -.5rem;
+  letter-spacing: .1rem;
+  	font-family: 'Voltaire';
+}
+
+.products .content .items .card .card-footer .icon
+{
+	padding-bottom: .6rem;
+}
+
+.products .content .items .card .card-footer .sub
+{
+	font-size: 1.5rem;
+	font-weight: bolder;
+}
+.products .content .items .card 
+{
+	position: relative;
+}
+.products .content .items .card  .overlay
+{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70%;
+  cursor: pointer;
+  border-radius: .7rem;
+  background: linear-gradient(rgba(0,0,0,.5), #4a1667);
+	opacity: 0;
+	transition: all 1s ease;
+
+}
+
+.products .content .items .card:hover .overlay
+{
+opacity: 1;
+}
+
+.products .content .items .card .desc
+{
+	position: absolute;
+	bottom: 0%;
+	opacity: 0;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+	color: #fff;
+	transition: 1.3s ease;
+
+}
+.products .content .items .card:hover .desc
+{
+	opacity: 1;
+	bottom: 50%;
+}
+
+.products .content .items .card .desc .btn
+{
+
+
+	padding:  1rem 2rem;
+	font-size: 1.5rem;
+	background-color: #fff;
+	color: #4a1667;
+}
+
+
+
+.products .content .items .card .desc .btn:hover
+{
+	font-weight: bolder;
+}
+
+
+
+.products .content .items .card:hover
+{
+	 box-shadow: 0 4px 8px 0 rgba(74, 22, 103, 0.4), 0 6px 20px 0 rgba(74, 22, 103, 0.29);
+}
+ 
+
+
+
+
+/**********************TWO-PRODUCTS*******************/
+.two-only
+{
+	height: 46vh;
+}
+
+.two-only .content
+{
+	display: grid;
+	grid-template-columns: repeat(2,40%);
+	grid-template-rows: 20rem;
+	grid-column-gap: 6rem;
+	justify-content: center;
+	padding-top: 1rem;
+}
+
+
+
+
+.two-only .content .first
+{
+	background-color: #fff;
+	 box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.2), 0 6px 20px 0 rgba(0,0,0, 0.19);
+	 transition: all .35s ease-in-out;
+}
+.two-only .content .first:hover
+{
+	box-shadow: 0 4px 8px 0 rgba(74, 22, 103, 0.4), 0 6px 20px 0 rgba(74, 22, 103, 0.29);
+}
+
+.two-only .content .first .title
+{
+	padding-top: 5rem;
+	padding-left: 3rem;
+
+}
+
+.two-only .content .first .title .head
+{
+	font-weight: 350;
+	font-size: 3rem;
+	padding-bottom: .3rem;
+	font-family: 'Alegreya SC';
+	 text-shadow: 2px 2px 4px #000000;
+}
+
+
+.two-only .content .first .title .sub-head
+{
+  font-weight: 650;
+  font-size: 2.2rem;
+  padding-bottom: 1.5rem;
+}
+
+.two-only .content .first .title a
+{
+	text-decoration: none;
+	border: .2rem solid #4a1667;
+	padding: .8rem 2.2rem;
+	outline: none;
+	background-color: #4a1667;
+	color: #fff;
+	border-radius: 3rem;
+	font-size: 1.8rem;
+	letter-spacing: .1rem;
+	font-family: 'Voltaire';
+	transition: all .35s ease-in-out;
+
+
+}
+.two-only .content .first .title a:hover
+{
+	background-color: transparent;
+	color: #4a1667;
+	box-shadow: 0 4px 8px 0 rgba(0,0,0, 0.3);
+}
+.two-only .content .first .fill img
+{
+  object-fit: contain;
+  display: block;
+  padding-top: 2rem;
+}
+
+
+
+
+
+
+
+
+/**********************ALL-PRODUCTS*******************/
+
+.all
+{
+	height: 130vh;
+	padding-top: 0;
+}
+
+
+.all .content
+{
+	display: grid;
+	grid-template-columns: repeat(4,23.5%);
+	grid-template-rows: repeat(2,auto);
+
+	grid-column-gap: 3rem;
+	grid-row-gap: 2.5rem;
+}
+
+
+
+/**********************NEWS-LETTER*******************/
+.news
+{
+	height: 35vh;
+	width: 100%;
+	background-color: #000;
+	margin-bottom: 5rem;
+
+
+}
+
+.news .content
+{
+	 color: #fff;
+	 display: grid;
+	 grid-template-columns: repeat(2,45%);
+	 grid-template-rows: auto;
+	 grid-column-gap: 3.5rem;
+	 justify-content: center;
+}
+
+.news .content .title
+{
+	padding-top: 6.5rem;
+	padding-left: 3.5rem;
+}
+
+
+.news .content .title h1
+{
+	font-family: 'Alegreya SC';
+	font-size: 3rem;
+	letter-spacing: .05rem;
+	font-weight: 500;
+	text-transform: capitalize;
+	  text-shadow: 2px 2px 4px #fff;
+	  padding-bottom: 1.5rem;
+}
+
+
+
+
+.news .content .title h5
+{
+	font-size: 1.5rem;
+	font-weight: 300;
+	text-transform: capitalize;
+}
+
+.news .content .main
+{
+	padding-top: 7.5rem;
+}
+
+.news .content .main .form-control
+{
+	height: 7vh;
+	font-size: 1.5rem;
+	border-top-left-radius: 1rem;
+	border-bottom-left-radius: 1rem;
+
+}
+
+.news .content .main .input-group-append .input-group-text
+{
+	font-size: 1.5rem;
+	padding: 1rem 2rem;
+	background-color: #4a1667;
+	color: #fff;
+	transition: all .3s ease-in-out;
+
+}
+
+.news .content .main .input-group-append .input-group-text:hover
+{
+	cursor: pointer;
+	color:#4a1667;
+	background-color: #fff;
+	border: .2rem solid #4a1667;
+}
+
+
+
+
+/**********************FOOTER*******************/
+.footer
+{
+	width: 100%;
+	height: 50vh;
+	background-color: #eee;
+}
+
+.footer .content
+{
+	display: grid;
+	grid-template-columns: repeat(4,22%);
+	grid-template-rows: auto;
+	grid-column-gap: 3rem;
+	justify-content: center;
+	padding-top: 6rem;
+}
+
+.footer .content .item h5
+{
+	font-size: 2.4rem;
+	font-weight: 700;
+	letter-spacing: .1rem;
+	font-family: 'Alegreya SC';
+	padding-bottom: 1.5rem;
+}
+
+
+.footer .content .item ul
+{
+	padding: 0;
+	margin: 0;
+}
+
+.footer .content .item ul li
+{
+	list-style-type: none;
+	text-transform: capitalize;
+	padding-bottom: .5rem;
+	cursor: pointer;
+}
+
+.footer .content .item ul li i
+{
+	padding-right:  1rem;
+	font-size:2.3rem;
+}
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width: 768px)
+{
+	html
+	{
+		font-size: 45%;
+	}
+	
+	.banner .fill
+	{
+	
+	margin-top: 9rem;
+
+	}
+	.products
+	{
+		height: 100vh;
+	}
+	.products .content
+	{
+	display: grid;
+	grid-template-columns: repeat(2,45%);
+	grid-template-rows: repeat(2,auto);
+	grid-column-gap: 3rem;
+	grid-row-gap: 3rem;
+	}
+	.two-only
+   { 
+	height: 40vh;
+	padding-top: 6rem;
+   }
+
+	.two-only .content .first .title .head
+	{
+		font-size: 2.2rem;
+	}
+
+	.all .content
+   {
+	display: grid;
+	grid-template-columns: repeat(4,23.5%);
+	grid-template-rows: repeat(2,auto);
+
+	grid-column-gap: 3rem;
+	grid-row-gap: 2.5rem;
+}
+
+   
+	
+
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 425px)
+{
+  html
+  {
+  	font-size: 30%;
+  }
+  section
+  {
+  	height: auto;
+  }
+  .header .navbar-brand
+  {
+  	margin-left: 5rem;
+  	font-size: 5rem;
+  }
+  .banner .main .title 
+   {
+  margin-top: 10rem;
+  text-align: center;
+   }
+   .products
+   {
+   	height: auto;
+   }
+ .products .content
+	{
+		
+	
+	display: flex;
+	justify-content: center;
+	align-content: center;
+	flex-direction: column;
+	align-items: center;
+	}
+
+	.products .content .items
+	{
+		width: 60%;
+		height: auto;
+	}
+	.two-only
+   { 
+	height: auto;
+   }
+
+     .two-only .content
+  {
+	display: grid;
+	grid-template-columns: repeat(1,70%);
+	grid-template-rows: repeat(2,50rem);
+	grid-row-gap: 6rem;
+	justify-content: center;
+	padding-top: 1rem;
+   }
+
+   .two-only .content .first .fill img
+   {
+   	height: 30rem;
+   	width: 35rem;
+   	object-fit: cover;
+   }
+   .two-only .content  .second
+   {
+   	margin-bottom: 2.5rem;
+   }
+   .news
+   {
+   	height: auto;
+   }
+   .news .content
+ {
+	 color: #fff;
+	 display: grid;
+	 grid-template-columns: 60%;
+	 grid-template-rows: repeat(2,auto);
+	 grid-row-gap: 1rem;
+	 justify-content: center;
+ }
+
+ .news .content .main
+ {
+ 	padding-left: 3.5rem;
+	padding-top: 2.5rem;
+ }
+ .news .content .main .form-control
+  {
+	height: 5vh;
+	}
+     
+
+
+     .footer
+{
+	
+	height: auto;
+	
+}
+
+.footer .content
+{
+	display: grid;
+	grid-template-columns: repeat(2,40%);
+	grid-template-rows: repeat(2,auto);
+	grid-column-gap: 3rem;
+	grid-row-gap: 3rem;
+	justify-content: center;
+	padding-top: 6rem;
+}
+}
